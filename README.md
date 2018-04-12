@@ -1,4 +1,4 @@
-# Tensorflow 3D pose estimation
+# Tensorflow  2D and 3D pose estimation
 
 ### Main Repository used:https://github.com/ildoonet/tf-pose-estimation
 
@@ -58,6 +58,8 @@ Now from the main repository we get the following 3D points in this format
     [-193.72193764  197.77633214  228.03920304]
     [-250.90957393  205.08800837  -35.04000835]
     [-265.76258367   79.63985917 -248.7765299 ]
+    
+    Using Pyqt library we plot these points and get the estimated 3D pose.
 
 # Results
 We get all the 2D keypoints and those are connected with best possible straight lines.
@@ -72,3 +74,30 @@ These are some of the test images and their results.
 ![golf](https://user-images.githubusercontent.com/19996897/38698497-e54108be-3eb2-11e8-9723-cf188a9e5519.jpg)
 ![heatmap](https://user-images.githubusercontent.com/19996897/38698500-e5a9fba8-3eb2-11e8-8161-5c790bf9493c.png)
 ![figure_3d](https://user-images.githubusercontent.com/19996897/38698499-e57b0fdc-3eb2-11e8-96ca-2ed3a7b3465c.png)
+
+Multiple Persons in a single image
+![heatmap](https://user-images.githubusercontent.com/19996897/38698883-21c2222c-3eb4-11e8-8784-c733f403fbfa.png)
+![person_1_3d](https://user-images.githubusercontent.com/19996897/38698878-20c82b5a-3eb4-11e8-8815-b3be38f19711.png)
+![person2_3d](https://user-images.githubusercontent.com/19996897/38698880-213255c0-3eb4-11e8-8725-2fb1aba7510d.png)
+![figure_3d](https://user-images.githubusercontent.com/19996897/38698882-218c4972-3eb4-11e8-95f1-6b7910f0273e.png)
+
+Images with no humans - 3D pose can't be detected because there are not enough keypoints for pose estimation.Here is an examle of image of a cat
+
+![cat](https://user-images.githubusercontent.com/19996897/38698854-1273a0ac-3eb4-11e8-88f4-3d5ca9f4467c.jpg)
+![heatmap](https://user-images.githubusercontent.com/19996897/38698853-1244d3ee-3eb4-11e8-859e-8f2920c65b5b.png)
+
+For more tested images please look into tested images directory in this folder.
+
+Here is a demo of 2D pose Estimation using Webcam.
+https://www.youtube.com/watch?v=XNDlHkFQmIs&list=PLpORSxrB3kQwrQ1IaGNqyRX1RM9kwOxwo
+
+Here is a demo of 3D pose Estimation using Webcam.
+https://youtu.be/_E2vrBo9z4o
+
+# Following Improvements can be done 
+
+Sometimes the 3D poses estimated by the model are not accurate but still it almost detecting every common pose of humans.For detecting more complicated images we can train the model on complex images and see whether it is detecting the pose or not.
+
+This model is running on Nvidia Geforce 840M with 4GB memory and we are getting nearly 8 frames per second.For near real time dectection we can use higher graphics memory cards.
+
+Camera used for testing the model is 5MP laptop webcam.We can use higher resolution camerad for filtering out the noise and get a clear image.
