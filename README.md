@@ -76,6 +76,7 @@ These are some of the test images and their results.
 ![figure_3d](https://user-images.githubusercontent.com/19996897/38698499-e57b0fdc-3eb2-11e8-96ca-2ed3a7b3465c.png)
 
 Multiple Persons in a single image
+
 ![heatmap](https://user-images.githubusercontent.com/19996897/38698883-21c2222c-3eb4-11e8-8784-c733f403fbfa.png)
 ![person_1_3d](https://user-images.githubusercontent.com/19996897/38698878-20c82b5a-3eb4-11e8-8815-b3be38f19711.png)
 ![person2_3d](https://user-images.githubusercontent.com/19996897/38698880-213255c0-3eb4-11e8-8725-2fb1aba7510d.png)
